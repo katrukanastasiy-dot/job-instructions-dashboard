@@ -7,7 +7,7 @@ GOOGLE_SHEET_ID = "1B5ZhBCmgopS1SJJppHTPmiMwTH19ArlXAmGNCUw_yXw"  # ← ЗАМЕ
 SHEET_NAME = "Лист1"  # или как у тебя назван лист
 
 # Ссылка для чтения таблицы как CSV
-url = f"https://docs.google.com/spreadsheets/d/e/{GOOGLE_SHEET_ID}/pub?output=csv&sheet={SHEET_NAME}"
+url = f"https://docs.google.com/spreadsheets/d/{GOOGLE_SHEET_ID}/pub?output=csv&sheet={SHEET_NAME}"
 
 # Загружаем данные
 try:
