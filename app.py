@@ -3,11 +3,11 @@ import pandas as pd
 from datetime import datetime, timedelta
 
 # === НАСТРОЙКА: вставь сюда ID своей Google Таблицы ===
-GOOGLE_SHEET_ID = "1B5ZhBCmgopS1SJJppHTPmiMwTH19ArlXAmGNCUw_yXw"  # ← ЗАМЕНИ НА СВОЙ ID!
+GOOGLE_SHEET_ID = "2PACX-1vRt6mkLcvtneR8oXZVq-NoLBqaK3Hublc8iVRNI7c_TVd3Wk00NeN9NJCCWFXxZyjy5kheBu2wu1kV7"  # ← ЗАМЕНИ НА СВОЙ ID!
 SHEET_NAME = "Лист1"  # или как у тебя назван лист
 
 # Ссылка для чтения таблицы как CSV
-url = f"https://docs.google.com/spreadsheets/d/{GOOGLE_SHEET_ID}/pub?output=csv&sheet={SHEET_NAME}"
+url = f"https://docs.google.com/spreadsheets/d/e/{GOOGLE_SHEET_ID}/pub?output=csv&sheet={SHEET_NAME}"
 
 # Загружаем данные
 try:
