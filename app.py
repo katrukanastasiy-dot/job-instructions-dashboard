@@ -11,9 +11,13 @@ url = f"https://docs.google.com/spreadsheets/d/e/{GOOGLE_SHEET_ID}/pub?output=cs
 
 # Загружаем данные
 try:
-    df = pd.read_csv(url)
+    df = pd.read_csv(url, encoding='utf-8')
+except UnicodeDecodeError:
+    # Если не сработало — пробуем другую кодировку (на всякий случай)
+    df = pd.read_csv(url, encoding='cp1251')
 except Exception as e:
-    st.error("Не удалось загрузить данные из Google Таблицы. Проверь ID и настройки доступа.")
+    st.error(f"Ошибка при загрузке данных: {str(e)}")
+    st.write(f"URL: {url}")
     st.stop()
 
 # Преобразуем дату
